@@ -8,11 +8,18 @@ https://whimsical.com/thought-flow-22TFNanDKbF1WQ6oDuLKYU
 
 ## Languages 
 
+Javascript, CSS
 ---------------------
 
 ### Libraries
 
+React, Redux, Redux-Thunk, Redux-Logger, React-Redux, Axios, Styled-components, React-router-dom, 
+
 -----------------------
+
+### Other
+
+React DevTools, Redux DevTools, 
 
 
 

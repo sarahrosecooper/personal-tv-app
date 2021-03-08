@@ -1,37 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/navigation.css";
+import Searchbar from "./Searchbar";
 
 const Navigation = () => {
   return (
-    <nav>
-      <ul class="container">
-        <li>
-          <Link to="/all">all</Link>
-        </li>
-        <li>
-          <Link to="/finished">finished</Link>
-        </li>
-        <li>
-          <Link to="/currentlywatching">currently watching</Link>
-        </li>
-        <li>
-          <Link to="/keepaneyeout">eye on</Link>
-        </li>
-        <li>
-          {/* NOTE within will be top 5 component?  */}
-          <Link to="/favorited">favorited</Link>{" "}
-        </li>
+    <div>
+      <nav>
+        <ul class="container">
+          <li>
+            <Link to="/all">all</Link>
+          </li>
+          <li>
+            <Link to="/finished">finished</Link>
+          </li>
+          <li>
+            <Link to="/currentlywatching">currently watching</Link>
+          </li>
+          <li>
+            <Link to="/keepaneyeout">eye on</Link>
+          </li>
+          <li>
+            {/* NOTE within will be top 5 component?  */}
+            <Link to="/favorited">favorited</Link>{" "}
+          </li>
 
-        {/* // FIXME IF LOGGED IN, LOGIN, IF LOGGED OUT, LOGOUT */}
-        {/* <li>
+          {/* // FIXME IF LOGGED IN, LOGIN, IF LOGGED OUT, LOGOUT */}
+          {/* <li>
           <Link to="/login">login</Link>
         </li> */}
-        <li>
-          <Link>logout</Link>{" "}
-        </li>
-      </ul>
-    </nav>
+          <li>
+            <Link>logout</Link>{" "}
+          </li>
+        </ul>
+      </nav>
+      <Searchbar />
+    </div>
   );
 };
 

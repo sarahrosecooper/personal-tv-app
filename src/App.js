@@ -17,9 +17,9 @@ function App() {
   return (
     <div>
       <Navigation />
-      <Login />{" "}
+
       {/*// FIXME If I am logged in, register LandingPage if I am not logged in, register Login page, or maybe create a seperate page to login // */}
-      <LandingPage />
+
       {/* SECTION ROUTES */}
       <Route path="/home">
         <LandingPage />

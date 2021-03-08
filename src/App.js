@@ -1,7 +1,12 @@
+import React from "react";
+import Navigation from "./components/Navigation";
+import Login from "./components/Login";
+
 function App() {
   return (
     <div>
-      <p>App.js</p>
+      <Navigation />
+      <Login />
     </div>
   );
 }

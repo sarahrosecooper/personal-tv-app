@@ -2,13 +2,14 @@ import React from "react";
 import Navigation from "./components/Navigation";
 import Login from "./components/Login";
 import AllLogged from "./components/AllLogged";
-import Completed from "./components/Completed";
+import Finished from "./components/Finished";
 import Disliked from "./components/Disliked";
 import EyeOut from "./components/EyeOut";
 import Favorited from "./components/Favorited";
 import LandingPage from "./components/LandingPage";
 import TopFive from "./components/TopFive";
 import WantToWatch from "./components/WantToWatch";
+import CurrentlyWatching from "./components/CurrentlyWatching";
 
 import { Link, Route, Switch } from "react-router-dom";
 
@@ -16,7 +17,8 @@ function App() {
   return (
     <div>
       <Navigation />
-      <Login />
+      <Login />{" "}
+      {/*// FIXME If I am logged in, register LandingPage if I am not logged in, register Login page, or maybe create a seperate page to login // */}
       <LandingPage />
       {/* SECTION ROUTES */}
       <Route path="/home">
@@ -25,11 +27,11 @@ function App() {
       <Route path="/login">
         <Login />
       </Route>
-      <Route path="/saved">
+      <Route path="/all">
         <AllLogged />
       </Route>
-      <Route path="/completed">
-        <Completed />
+      <Route path="/finished">
+        <Finished />
       </Route>
       <Route path="/disliked">
         <Disliked />
@@ -45,6 +47,9 @@ function App() {
       </Route>
       <Route path="/wanttowatch">
         <WantToWatch />
+      </Route>
+      <Route path="/currentlywatching">
+        <CurrentlyWatching />
       </Route>
     </div>
   );

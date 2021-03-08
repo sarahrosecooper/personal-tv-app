@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  padding: 1%;
+  background-color: #add8e6;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.container > li {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 14px 16px;
+}
+
+ul {
+  margin: 0;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+@media all and (max-width: 600px) {
+  .container > li {
+    flex-basis: 100%;
+  }
+}

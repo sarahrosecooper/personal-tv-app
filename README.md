@@ -8,7 +8,8 @@ https://whimsical.com/thought-flow-22TFNanDKbF1WQ6oDuLKYU
 
 ## Languages 
 
-Javascript, CSS
+Javascript, CSS, JSX
+
 ---------------------
 
 ### Libraries

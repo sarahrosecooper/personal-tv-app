@@ -22,5 +22,7 @@ React, Redux, Redux-Thunk, Redux-Logger, React-Redux, Axios, Styled-components, 
 
 React DevTools, Redux DevTools, 
 
+---------------------
+
 
 

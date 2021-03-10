@@ -11,10 +11,9 @@ import TopFive from "./components/TopFive";
 import WantToWatch from "./components/WantToWatch";
 import CurrentlyWatching from "./components/CurrentlyWatching";
 import SingleShow from "./components/SingleShow";
-import AlLResults from "./components/AllResults";
+import AllResults from "./components/AllResults";
 
 import { Link, Route, Switch } from "react-router-dom";
-import AllResults from "./components/AllResults";
 
 function App() {
   return (
@@ -57,7 +56,7 @@ function App() {
       <Route path="/singleshow/:id">
         <SingleShow />
       </Route>
-      <Route path="/allresults/:id">
+      <Route path="/allresults/">
         <AllResults />
       </Route>
     </div>

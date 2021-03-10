@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 // guideline: https://medium.com/@carlie.anglemire/search-bar-in-react-with-a-3rd-party-api-ced92c940236
 
@@ -22,6 +23,25 @@ const Searchbar = () => {
       searchTerm: "",
     });
   };
+
+  useEffect(() => {
+    axios
+      .get("http://api.tvmaze.com/search/shows?q=girls")
+      .then((res) => {
+        console.log(
+          "SRC: SUCCESS: SearchBar.js, UseEffect Axios positive response",
+          res.data[0].show.name
+        );
+        setSearch({
+          searchTerm: res.data[0].show.name,
+        });
+      })
+      .catch((err) => {
+        console.log(
+          ("SRC: ERROR: SearchBar.js, UseEffect Axios response", err)
+        );
+      });
+  }, []);
 
   return (
     <div>

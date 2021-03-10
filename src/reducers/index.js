@@ -1,8 +1,8 @@
-// import { combineReducers } from "redux";
-// // import { firstReducerName as ACRONYM } from ""
-// // import { secondReducerName as ACRONYM } from ""
+import { combineReducers } from "redux";
+import { searchBarReducer as SEARCHREDUCER } from "./searchbarReducer";
+// import { secondReducerName as ACRONYM } from ""
 
-// export default combineReducers({
-//   // firstreduceracronym,
-//   // secondreduceracronym,
-// });
+export default combineReducers({
+  SEARCHREDUCER,
+  // secondreduceracronym,
+});

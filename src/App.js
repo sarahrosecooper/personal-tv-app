@@ -10,6 +10,8 @@ import LandingPage from "./components/LandingPage";
 import TopFive from "./components/TopFive";
 import WantToWatch from "./components/WantToWatch";
 import CurrentlyWatching from "./components/CurrentlyWatching";
+import SingleShow from "./components/SingleShow";
+import AllResults from "./components/AllResults";
 
 import { Link, Route, Switch } from "react-router-dom";
 
@@ -50,6 +52,12 @@ function App() {
       </Route>
       <Route path="/currentlywatching">
         <CurrentlyWatching />
+      </Route>
+      <Route path="/singleshow/:id">
+        <SingleShow />
+      </Route>
+      <Route path="/allresults/">
+        <AllResults />
       </Route>
     </div>
   );

@@ -7,7 +7,7 @@ const Navigation = () => {
   return (
     <div>
       <nav>
-        <ul class="container">
+        <ul className="container">
           <li>
             <Link to="/all">all</Link>
           </li>
@@ -30,7 +30,7 @@ const Navigation = () => {
           <Link to="/login">login</Link>
         </li> */}
           <li>
-            <Link>logout</Link>{" "}
+            <Link to="">logout</Link>{" "}
           </li>
         </ul>
       </nav>

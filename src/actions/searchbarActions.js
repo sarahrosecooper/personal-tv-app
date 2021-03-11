@@ -7,7 +7,7 @@ export const ERROR_RETRIEVING_SEARCH_RESULTS =
 export const getTvShowResults = (query) => (dispatch) => {
   dispatch({ type: SEARCH_RESULTS_LOADING });
   axios
-    .get(`http://api.tvmaze.com/singlesearch/shows?q=:${query}`)
+    .get(`http://api.tvmaze.com/search/shows?q=:${query}`)
     .then((response) => {
       dispatch({
         type: FOUND_SEARCH_RESULTS,

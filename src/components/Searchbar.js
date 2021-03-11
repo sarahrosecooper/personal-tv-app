@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
 import { getTvShowResults } from "../actions/searchbarActions";
+import { useHistory, useParams, Link } from "react-router-dom";
 
 // guideline1 : https://medium.com/@carlie.anglemire/search-bar-in-react-with-a-3rd-party-api-ced92c940236
 // guideline 2: https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7/
@@ -12,6 +13,9 @@ const Searchbar = (props) => {
   });
 
   // console.log(search);
+
+  const { id } = useParams();
+  const { push } = useHistory();
 
   const handleChange = (e) => {
     setSearch({
@@ -26,6 +30,7 @@ const Searchbar = (props) => {
       searchTerm: "",
     });
     props.getTvShowResults(search.searchTerm);
+    push("/allresults");
   };
 
   // useEffect(() => {
@@ -64,6 +69,7 @@ const Searchbar = (props) => {
           onChange={handleChange}
           placeholder="search here"
         />
+        <button>search</button>
       </form>
     </div>
   );

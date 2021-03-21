@@ -12,6 +12,7 @@ const AllResults = (props) => {
   const { push } = useHistory();
 
   const handleClick = () => {
+    // console.log(item);
     push("/topfive");
   };
   // const image = props.tv_show_results.show.image.medium ===
@@ -21,7 +22,7 @@ const AllResults = (props) => {
       {props.tv_show_results.map((item) => {
         return (
           <div key={item.show.id}>
-            <div onClick={handleClick} className="name">
+            <div onClick={handleClick /*(item)*/} className="name">
               {item.show.name}
             </div>
             <br></br>

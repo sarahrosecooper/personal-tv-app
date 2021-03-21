@@ -7,30 +7,43 @@ const Navigation = () => {
   return (
     <div>
       <nav>
-        <ul className="container">
-          <li>
-            <Link to="/all">all</Link>
+        <ul className="navigation-container">
+          <li className="navigation-li">
+            <Link className="navigation-a-link" to="/all">
+              all
+            </Link>
           </li>
-          <li>
-            <Link to="/finished">finished</Link>
+          <li className="navigation-li">
+            <Link className="navigation-a-link" to="/finished">
+              finished
+            </Link>
           </li>
-          <li>
-            <Link to="/currentlywatching">currently watching</Link>
+          <li className="navigation-li">
+            <Link className="navigation-a-link" to="/currentlywatching">
+              currently watching
+            </Link>
           </li>
-          <li>
-            <Link to="/keepaneyeout">eye on</Link>
+          <li className="navigation-li">
+            <Link className="navigation-a-link" to="/keepaneyeout">
+              keep up
+            </Link>
           </li>
-          <li>
+
+          <li className="navigation-li">
             {/* NOTE within will be top 5 component?  */}
-            <Link to="/favorited">favorited</Link>{" "}
+            <Link className="navigation-a-link" to="/favorited">
+              favs
+            </Link>
           </li>
 
           {/* // FIXME IF LOGGED IN, LOGIN, IF LOGGED OUT, LOGOUT */}
           {/* <li>
           <Link to="/login">login</Link>
         </li> */}
-          <li>
-            <Link to="">logout</Link>{" "}
+          <li className="navigation-li">
+            <Link className="navigation-a-link" to="">
+              logout
+            </Link>
           </li>
         </ul>
       </nav>

@@ -1,43 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
-import { useHistory } from "react-router-dom";
+import SingleShow from "./SingleShow.js";
 
 const AllResults = (props) => {
-  console.log("these are the AllResults props", props);
-  console.log(
-    "these are the AllResults props getting deeper"
-    // props.tv_show_results[0].show.id
-  );
+  const [selectedTitle, setSelectedTitle] = useState();
+  const [displayShow, setDisplayShow] = useState(false);
 
-  const { push } = useHistory();
-
-  const handleClick = () => {
-    // console.log(item);
-    push("/topfive");
+  const handleClick = (item) => {
+    setSelectedTitle(item.show);
+    displayTheShow();
   };
-  // const image = props.tv_show_results.show.image.medium ===
+
+  const displayTheShow = () => {
+    setDisplayShow(!displayShow);
+  };
+
   return (
     <div>
-      this is the all results component<br></br>
-      {props.tv_show_results.map((item) => {
-        return (
-          <div key={item.show.id}>
-            <div onClick={handleClick /*(item)*/} className="name">
-              {item.show.name}
+      {displayShow ? (
+        <SingleShow show={selectedTitle} />
+      ) : (
+        props.tv_show_results.map((item) => {
+          return (
+            <div key={item.show.id}>
+              <div
+                onClick={() => {
+                  handleClick(item);
+                }}
+              >
+                {item.show.name}
+
+                <br></br>
+                <img
+                  src={item.show.image === null ? null : item.show.image.medium}
+                />
+              </div>
+              <br></br>
+              {item.show.summary
+                .replace(`<p>`, "")
+                .replace(`<b>`, "")
+                .replace(`</p>`, "")
+                .replace(`</b>`, "")}
             </div>
-            <br></br>
-            <img
-              src={item.show.image === null ? null : item.show.image.medium}
-            />
-            <br></br>
-            {item.show.summary
-              .replace(`<p>`, "")
-              .replace(`<b>`, "")
-              .replace(`</p>`, "")
-              .replace(`</b>`, "")}
-          </div>
-        );
-      })}
+          );
+        })
+      )}
     </div>
   );
 };

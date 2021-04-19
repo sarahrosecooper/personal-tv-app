@@ -12,8 +12,6 @@ const Searchbar = (props) => {
     searchTerm: "",
   });
 
-  // console.log(search);
-
   const { id } = useParams();
   const { push } = useHistory();
 
@@ -32,29 +30,6 @@ const Searchbar = (props) => {
     props.getTvShowResults(search.searchTerm);
     push("/allresults");
   };
-
-  // useEffect(() => {
-  //   props.getTvShowResults(search);
-  // }, []);
-
-  // useEffect(() => {
-  //   axios
-  //     .get("http://api.tvmaze.com/search/shows?q=girls")
-  //     .then((res) => {
-  //       console.log(
-  //         "SRC: SUCCESS: SearchBar.js, UseEffect Axios positive response",
-  //         res.data[0].show.name
-  //       );
-  //       setSearch({
-  //         searchTerm: res.data[0].show.name,
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       console.log(
-  //         ("SRC: ERROR: SearchBar.js, UseEffect Axios response", err)
-  //       );
-  //     });
-  // }, []);
 
   return (
     <div>

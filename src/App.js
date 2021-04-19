@@ -53,7 +53,7 @@ function App() {
       <Route path="/currentlywatching">
         <CurrentlyWatching />
       </Route>
-      <Route path="/singleshow/:id">
+      <Route path="/singleshow/:showId">
         <SingleShow />
       </Route>
       <Route path="/allresults/">

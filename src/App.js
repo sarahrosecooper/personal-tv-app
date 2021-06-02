@@ -20,7 +20,7 @@ function App() {
     <div>
       <Navigation />
 
-      {/*// FIXME If I am logged in, register LandingPage if I am not logged in, register Login page, or maybe create a seperate page to login // */}
+      {/*// FIXME If I am logged in, register LandingPage if I am not logged in, register Login page, or maybe create a separate page to login // */}
 
       {/* SECTION ROUTES */}
       <Route path="/home">
@@ -38,25 +38,25 @@ function App() {
       <Route path="/disliked">
         <Disliked />
       </Route>
-      <Route path="/keepaneyeout">
+      <Route path="/keepAnEyeOut">
         <EyeOut />
       </Route>
       <Route path="/favorited">
         <Favorited />
       </Route>
-      <Route path="/topfive">
+      <Route path="/topFive">
         <TopFive />
       </Route>
-      <Route path="/wanttowatch">
+      <Route path="/wantToWatch">
         <WantToWatch />
       </Route>
-      <Route path="/currentlywatching">
+      <Route path="/currentlyWatching">
         <CurrentlyWatching />
       </Route>
-      <Route path="/singleshow/:showId">
+      <Route path="/singleShow/:showId">
         <SingleShow />
       </Route>
-      <Route path="/allresults/">
+      <Route path="/allResults/">
         <AllResults />
       </Route>
     </div>

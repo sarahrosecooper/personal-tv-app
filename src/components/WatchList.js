@@ -1,6 +1,6 @@
 import React from "react";
 
-// Pretty self explanatory
+// Shows to add to watchlist/want to watch/log later
 
 const WatchList = () => {
   return <div>this is the WantToWatch component</div>;

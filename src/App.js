@@ -14,6 +14,8 @@ import AllResults from "./components/AllResults";
 
 import { Link, Route, Switch } from "react-router-dom";
 
+// Just landing page for routes, etc
+
 function App() {
   return (
     <div>

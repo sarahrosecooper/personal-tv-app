@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { getTvShowResults } from "../actions/searchbarActions";
 import { useHistory, useParams, Link } from "react-router-dom";
 
+// Search component to search for all tv shows to log
+
 // guideline1 : https://medium.com/@carlie.anglemire/search-bar-in-react-with-a-3rd-party-api-ced92c940236
 // guideline 2: https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7/
 

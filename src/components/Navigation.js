@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "../styles/navigation.css";
 import Searchbar from "./Searchbar";
 
+// Nav bar
+
 const Navigation = () => {
   return (
     <div>

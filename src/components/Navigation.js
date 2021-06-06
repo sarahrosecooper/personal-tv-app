@@ -9,13 +9,8 @@ const Navigation = () => {
       <nav>
         <ul className="navigation-container">
           <li className="navigation-li">
-            <Link className="navigation-a-link" to="/all">
-              all
-            </Link>
-          </li>
-          <li className="navigation-li">
-            <Link className="navigation-a-link" to="/finished">
-              finished
+            <Link className="navigation-a-link" to="/watchlist">
+              watchlist
             </Link>
           </li>
           <li className="navigation-li">
@@ -33,6 +28,16 @@ const Navigation = () => {
             {/* NOTE within will be top 5 component?  */}
             <Link className="navigation-a-link" to="/favorited">
               favs
+            </Link>
+          </li>
+          <li className="navigation-li">
+            <Link className="navigation-a-link" to="/finished">
+              finished
+            </Link>
+          </li>
+          <li className="navigation-li">
+            <Link className="navigation-a-link" to="/disliked">
+              disliked
             </Link>
           </li>
 

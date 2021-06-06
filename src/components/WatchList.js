@@ -2,8 +2,8 @@ import React from "react";
 
 // Pretty self explanatory
 
-const WantToWatch = () => {
+const WatchList = () => {
   return <div>this is the WantToWatch component</div>;
 };
 
-export default WantToWatch;
+export default WatchList;

@@ -1,14 +1,13 @@
 import React from "react";
 import Navigation from "./components/Navigation";
 import Login from "./components/Login";
-import AllLogged from "./components/AllLogged";
 import Finished from "./components/Finished";
 import Disliked from "./components/Disliked";
-import EyeOut from "./components/EyeOut";
+import KeepUp from "./components/KeepUp";
 import Favorited from "./components/Favorited";
 import LandingPage from "./components/LandingPage";
 import TopFive from "./components/TopFive";
-import WantToWatch from "./components/WantToWatch";
+import WatchList from "./components/WatchList";
 import CurrentlyWatching from "./components/CurrentlyWatching";
 import SingleShow from "./components/SingleShow";
 import AllResults from "./components/AllResults";
@@ -20,7 +19,7 @@ function App() {
     <div>
       <Navigation />
 
-      {/*// FIXME If I am logged in, register LandingPage if I am not logged in, register Login page, or maybe create a seperate page to login // */}
+      {/*// FIXME If I am logged in, register LandingPage if I am not logged in, register Login page, or maybe create a separate page to login // */}
 
       {/* SECTION ROUTES */}
       <Route path="/home">
@@ -29,17 +28,14 @@ function App() {
       <Route path="/login">
         <Login />
       </Route>
-      <Route path="/all">
-        <AllLogged />
-      </Route>
       <Route path="/finished">
         <Finished />
       </Route>
       <Route path="/disliked">
         <Disliked />
       </Route>
-      <Route path="/keepaneyeout">
-        <EyeOut />
+      <Route path="/keepup">
+        <KeepUp />
       </Route>
       <Route path="/favorited">
         <Favorited />
@@ -47,8 +43,8 @@ function App() {
       <Route path="/topfive">
         <TopFive />
       </Route>
-      <Route path="/wanttowatch">
-        <WantToWatch />
+      <Route path="/watchlist">
+        <WatchList />
       </Route>
       <Route path="/currentlywatching">
         <CurrentlyWatching />

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import SingleShow from "./SingleShow.js";
 
+// All results from initial search from searchbar
+
 const AllResults = (props) => {
   const [selectedTitle, setSelectedTitle] = useState();
   const [displayShow, setDisplayShow] = useState(false);

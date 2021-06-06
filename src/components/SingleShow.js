@@ -1,5 +1,7 @@
 import React from "react";
 
+// Singleshow result from searchbar
+
 const SingleShow = ({ show }) => {
   // FIXME why doesn't the searchBar work when only a single result is showing, is it the state in the reducer?
   console.log("this is the single show result", show);

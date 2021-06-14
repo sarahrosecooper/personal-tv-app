@@ -34,6 +34,7 @@ const AllResults = (props) => {
 
                 <br></br>
                 <img
+                  alt={item.show.name}
                   src={item.show.image === null ? null : item.show.image.medium}
                 />
               </div>

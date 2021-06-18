@@ -15,15 +15,16 @@ const SingleShow = ({ show }) => {
       <div>
         {show.name}
         <br></br>
+        {/* Something weird is going on with some broken images. Try the searchbar for "Fun"*/}
         <img
           alt={show.name}
           src={show.image === null ? null : show.image.medium}
         />{" "}
-        // NOTE some shows don't have images, when that happens there is an
-        error, so this is necessary
+        {/* // NOTE some shows don't have images, when that happens there is an
+        error, so this is necessary */}
         <br></br>
-        // NOTE how the date comes back, it is necessary to take away html tags.
-        Is there a better way to do this?
+        {/* // NOTE how the date comes back, it is necessary to take away html tags.
+        Is there a better way to do this? */}
         {show.summary
           .replace(`<p>`, "")
           .replace(`<b>`, "")

@@ -13,12 +13,15 @@ const AllResults = (props) => {
     displayTheShow();
   };
 
+  // NOTE this is simply toggling if you have clicked on the show, it will show. toggling the visibility of the single show ON/OFF
   const displayTheShow = () => {
     setDisplayShow(!displayShow);
   };
 
   return (
     <div>
+      // NOTE is the displayShow toggled on? Display only the selected single
+      show, otherwise OFF display all results
       {displayShow ? (
         <SingleShow show={selectedTitle} />
       ) : (
@@ -35,10 +38,12 @@ const AllResults = (props) => {
                 <br></br>
                 <img
                   alt={item.show.name}
-                  src={item.show.image === null ? null : item.show.image.medium}
+                  src={item.show.image === null ? null : item.show.image.medium} // NOTE some show's don't have images, if there is no image this is necessary or an error will render
                 />
               </div>
-              <br></br>
+              <br></br> // NOTE the way the API works, each description has html
+              tags, this is the only way I could come up with to remove them.
+              Better way to fix??
               {item.show.summary
                 .replace(`<p>`, "")
                 .replace(`<b>`, "")

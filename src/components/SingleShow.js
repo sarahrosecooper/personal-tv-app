@@ -18,8 +18,12 @@ const SingleShow = ({ show }) => {
         <img
           alt={show.name}
           src={show.image === null ? null : show.image.medium}
-        />
+        />{" "}
+        // NOTE some shows don't have images, when that happens there is an
+        error, so this is necessary
         <br></br>
+        // NOTE how the date comes back, it is necessary to take away html tags.
+        Is there a better way to do this?
         {show.summary
           .replace(`<p>`, "")
           .replace(`<b>`, "")

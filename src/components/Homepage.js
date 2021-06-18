@@ -4,8 +4,8 @@ import React from "react";
 // It will render the top 5 from the Favorites page
 // As well as a preview of your watchlist ??? potentially ????
 
-const LandingPage = () => {
-  return <div>this is landing page component</div>;
+const Homepage = () => {
+  return <div>this is Homepage/Landing/After logging in page component</div>;
 };
 
-export default LandingPage;
+export default Homepage;

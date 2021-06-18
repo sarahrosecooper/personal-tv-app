@@ -1,11 +1,11 @@
 import React from "react";
 import Navigation from "./components/Navigation";
-import Login from "./components/Login";
+import Welcome from "./components/Welcome";
 import Finished from "./components/Finished";
 import Disliked from "./components/Disliked";
 import KeepUp from "./components/KeepUp";
 import Favorited from "./components/Favorited";
-import LandingPage from "./components/LandingPage";
+import Homepage from "./components/Homepage";
 import TopFive from "./components/TopFive";
 import WatchList from "./components/WatchList";
 import CurrentlyWatching from "./components/CurrentlyWatching";
@@ -21,14 +21,12 @@ function App() {
     <div>
       <Navigation />
 
-      {/*// FIXME If I am logged in, register LandingPage if I am not logged in, register Login page, or maybe create a separate page to login // */}
-
       {/* SECTION ROUTES */}
       <Route path="/home">
-        <LandingPage />
+        <Homepage />
       </Route>
-      <Route path="/login">
-        <Login />
+      <Route path="/Welcome">
+        <Welcome />
       </Route>
       <Route path="/finished">
         <Finished />

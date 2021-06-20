@@ -1,6 +1,5 @@
 //REVIEW
     camelCasing the names of the paths and in all classNames is lacking.  Let's be more consistent with this.  Good habits are good to get into.
-
 // REVIEW
   AllResults needs to return Results as a map. This will then allow a single show click.  should be names Results that return shows.map(result => { <Result />}). Then Result can push to the single show when clicked. 
 // NOTE 

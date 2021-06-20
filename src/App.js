@@ -22,10 +22,11 @@ function App() {
       <Navigation />
 
       {/* SECTION ROUTES */}
-      <Route path="/home">
+      <Switch>
+         <Route path="/home">
         <Homepage />
       </Route>
-      <Route path="/Welcome">
+      <Route path="/welcome">
         <Welcome />
       </Route>
       <Route path="/finished">
@@ -34,27 +35,29 @@ function App() {
       <Route path="/disliked">
         <Disliked />
       </Route>
-      <Route path="/keepup">
+      <Route path="/keepUp">
         <KeepUp />
       </Route>
       <Route path="/favorited">
         <Favorited />
       </Route>
-      <Route path="/topfive">
+      <Route path="/topFive">
         <TopFive />
       </Route>
-      <Route path="/watchlist">
+      <Route path="/watchList">
         <WatchList />
       </Route>
-      <Route path="/currentlywatching">
+      <Route path="/currentlyWatching">
         <CurrentlyWatching />
       </Route>
-      <Route path="/singleshow/:showId">
+      <Route path="/allResults/result">
         <SingleShow />
       </Route>
-      <Route path="/allresults/">
+      <Route path="/allResults">
         <AllResults />
       </Route>
+      </Switch>
+     
     </div>
   );
 }

@@ -1,12 +1,12 @@
 /* for mobile */
 
-.navigation-container {
+.navigation__container {
   display: flex;
 
   background-color: #add8e6;
 }
 
-.navigation-a-link {
+.navigation__a__link {
   display: flex;
   text-decoration: none;
   color: white;
@@ -15,14 +15,14 @@
   justify-content: space-around;
 }
 
-.navigation-li {
+.navigation__li {
   padding: 1%;
   border-right: 1px solid white;
   flex: 1;
 }
 
 @media all and (min-width: 600px) {
-  .navigation-a-link {
+  .navigation__a__link {
     padding: 14px 16px;
   }
 }

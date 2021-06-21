@@ -12,7 +12,7 @@ const SingleShow = ({ show }) => {
 
   return (
     <SingleShowDiv>
-      <div>
+      <div className="singleShow">
         {show.name}
         <br></br>
         {/* Something weird is going on with some broken images. Try the searchbar for "Fun"*/}

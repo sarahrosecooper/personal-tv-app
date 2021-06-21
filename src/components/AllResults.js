@@ -21,7 +21,7 @@ const AllResults = (props) => {
   return (
     // {/* NOTE is the displayShow toggled on? Display only the selected single
     // show, otherwise OFF display all results */}
-    <div>
+    <div className="allResults">
       {displayShow ? (
         <SingleShow show={selectedTitle} />
       ) : (

@@ -5,7 +5,11 @@ import React from "react";
 // As well as a preview of your watchlist ??? potentially ????
 
 const Homepage = () => {
-  return <div>this is Homepage/Landing/After logging in page component</div>;
+  return (
+    <div className="homepage">
+      this is Homepage/Landing/After logging in page component
+    </div>
+  );
 };
 
 export default Homepage;

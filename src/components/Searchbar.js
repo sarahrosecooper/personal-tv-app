@@ -34,7 +34,7 @@ const Searchbar = (props) => {
   };
 
   return (
-    <div>
+    <div className="searchbar">
       this is the searchbar component
       <form onSubmit={submitSearch}>
         <label htmlFor="searchTerm" />

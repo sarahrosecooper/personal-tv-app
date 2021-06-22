@@ -3,36 +3,43 @@ import { Link } from "react-router-dom";
 import "../styles/navigation.css";
 import Searchbar from "./Searchbar";
 
+// Nav bar
+
 const Navigation = () => {
   return (
-    <div>
+    <div className="navigation">
       <nav>
-        <ul className="navigation-container">
-          <li className="navigation-li">
-            <Link className="navigation-a-link" to="/all">
-              all
+        <ul className="navigation__container">
+          <li className="navigation__li">
+            <Link className="navigation__a__link" to="/watchlist">
+              watchlist
             </Link>
           </li>
-          <li className="navigation-li">
-            <Link className="navigation-a-link" to="/finished">
-              finished
-            </Link>
-          </li>
-          <li className="navigation-li">
-            <Link className="navigation-a-link" to="/currentlywatching">
+          <li className="navigation__li">
+            <Link className="navigation__a__link" to="/currentlywatching">
               currently watching
             </Link>
           </li>
-          <li className="navigation-li">
-            <Link className="navigation-a-link" to="/keepaneyeout">
+          <li className="navigation__li">
+            <Link className="navigation__a__link" to="/keepaneyeout">
               keep up
             </Link>
           </li>
 
-          <li className="navigation-li">
+          <li className="navigation__li">
             {/* NOTE within will be top 5 component?  */}
-            <Link className="navigation-a-link" to="/favorited">
+            <Link className="navigation__a__link" to="/favorited">
               favs
+            </Link>
+          </li>
+          <li className="navigation__li">
+            <Link className="navigation__a__link" to="/finished">
+              finished
+            </Link>
+          </li>
+          <li className="navigation__li">
+            <Link className="navigation__a__link" to="/disliked">
+              disliked
             </Link>
           </li>
 
@@ -40,8 +47,8 @@ const Navigation = () => {
           {/* <li>
           <Link to="/login">login</Link>
         </li> */}
-          <li className="navigation-li">
-            <Link className="navigation-a-link" to="">
+          <li className="navigation__li">
+            <Link className="navigation__a__link" to="">
               logout
             </Link>
           </li>

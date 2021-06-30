@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Result = (props) => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  // console.log("this is props", props)
+  return (
+    <div>
+      <h1>{props.result.show.name} </h1>
+      <img src={props.result.show.image} />
+    </div>
+  );
+};
 
-export default Result
+export default Result;

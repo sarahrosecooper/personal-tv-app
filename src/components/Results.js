@@ -1,28 +1,36 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth.js";
-import "../styles/AllResults.css";
+import Result from "./Result.js";
+// import "../styles/AllResults.css";
 
 const Results = () => {
   const [results, setResults] = useState([]);
   const [search, setSearch] = useState("");
-
+  const { push } = useHistory();
 
   // NOTE search bar functions below
-    const handleChange = (e) => {
-      setSearch({
-        ...search,
-        [e.target.name]: e.target.value,
-      });
-    };
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
 
-    const submitSearch = (e) => {
-      e.preventDefault();
-      setSearch({
-        searchTerm: "",
+  const submitSearch = (e) => {
+    e.preventDefault();
+    axiosWithAuth()
+      .get(`search/shows?q=:${search}`)
+      .then((response) => {
+        console.log("this is response from search", response);
+        setResults(response.data);
+        setSearch("");
+        push("/results/result");
+      })
+      .catch((err) => {
+        console.log("this is the error from search", err);
       });
-      props.getTvShowResults(search.searchTerm);
-      push("/allresults");
-    };
+
+    // props.getTvShowResults(search.searchTerm);
+    // push("/allresults");
+  };
 
   return (
     <div className="results">
@@ -33,14 +41,18 @@ const Results = () => {
             id="searchTerm"
             type="text"
             name="searchTerm"
-            value={search.searchTerm}
+            value={search}
             onChange={handleChange}
             placeholder="search here"
           />
           <button>search</button>
         </form>
       </div>
-      <div className="results__singleResult"></div>
+      <div className="results__allResults">
+        {results.map((result) => (
+          <Result key={result.show.id} result={result} />
+        ))}
+      </div>
     </div>
   );
 };
